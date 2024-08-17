@@ -1,0 +1,154 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #202020;
+  color: #D6D6D6;
+}
+
+header {
+  background-color: #333533;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #FFEE32;
+}
+
+.hamburger-menu {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.hamburger-menu span {
+  background-color: #FFEE32;
+  height: 3px;
+  margin: 4px;
+  width: 25px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+}
+
+.nav-links li {
+  margin: 0 15px;
+}
+
+.nav-links li a {
+  color: #D6D6D6;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+  background-color: #202020;
+  position: relative;
+}
+
+.hero img {
+  max-width: 100%;
+  height: auto;
+  max-height: 90vh;
+}
+
+.login-box {
+  background-color: rgba(51, 53, 53, 0.9);
+  padding: 30px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 10px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.login-box h2 {
+  color: #FFEE32;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.user-box {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.user-box input {
+  background: none;
+  border: none;
+  border-bottom: 1px solid #D6D6D6;
+  color: #D6D6D6;
+  font-size: 16px;
+  padding: 10px 0;
+  width: 100%;
+}
+
+.user-box label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #FFEE32;
+  pointer-events: none;
+  transition: 0.5s;
+}
+
+.user-box input:focus ~ label,
+.user-box input:valid ~ label {
+  top: -20px;
+  left: 0;
+  color: #FFEE32;
+  font-size: 12px;
+}
+
+.login-btn {
+  background-color: #FFD100;
+  color: #202020;
+  border: none;
+  padding: 10px 20px;
+  width: 100%;
+  cursor: pointer;
+  font-size: 18px;
+  border-radius: 5px;
+}
+
+.login-btn:hover {
+  background-color: #FFEE32;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    background-color: #333533;
+    top: 70px;
+    right: 0;
+    width: 200px;
+    padding: 20px;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .hamburger-menu {
+    display: flex;
+  }
+}
